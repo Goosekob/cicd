@@ -1,0 +1,19 @@
+name: aaa
+on:
+   # События, которые запускают jobs
+    push:
+      branches: [ "main" ]
+    pull_request:
+      branches: [ "main" ]
+
+# jobs запускаются параллельно, если не указана последовательность
+jobs:
+    hello:
+        # Шаги
+        steps:
+          # Actions от github: проверяет репозиторий, гит и т.д.
+          - uses: actions/checkout@v3
+
+          # Скрипт shell
+          - name: script
+            run: echo Hello, world!
