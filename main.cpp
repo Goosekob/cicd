@@ -36,7 +36,7 @@ int main() {
     std::cerr << "Not all tests passed! " << num_failed_tests << " failures.\n";
     return -1;
   } else {
-    std::cout << "passed!!!" << std::endl;
+    std::cout << "Все тесты прошли" << std::endl;
     return 0;
   }
 }
