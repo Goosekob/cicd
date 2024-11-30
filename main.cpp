@@ -5,6 +5,10 @@ int add(int a, int b) {
   return a + b;
 }
 
+int dda(int a, int b) {
+  return a - b;
+}
+
 int main() {
   int num_failed_tests = 0;
 
@@ -23,11 +27,16 @@ int main() {
     num_failed_tests++;
   }
 
+  if (dda(5, 3) != 2) {
+    std::cerr << "Test dda(5, 3) failed\n";
+    num_failed_tests++;
+  } 
+
   if (num_failed_tests > 0) {
     std::cerr << "Not all tests passed! " << num_failed_tests << " failures.\n";
     return -1;
   } else {
-    std::cout << "All tests passed!" << std::endl;
+    std::cout << "Tests passed!" << std::endl;
     return 0;
   }
 }
