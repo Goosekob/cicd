@@ -1,4 +1,4 @@
-name: C++ CI - Simple Tests
+name: build
 
 on:
   push:
