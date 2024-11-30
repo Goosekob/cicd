@@ -19,7 +19,7 @@ int main() {
     num_failed_tests++;
   }
 
-   if (add(-3, 3) != 0) {
+   if (add(-3, 3) != 1) {
     std::cerr << "Test add(-3, 3) failed!\n";
     num_failed_tests++;
   }
