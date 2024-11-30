@@ -31,7 +31,7 @@ int main() {
     std::cerr << "Test dda(5, 3) failed\n";
     num_failed_tests++;
   } 
-
+  std::cout << "Новый год через 31 день!!!!!\n";
   if (num_failed_tests > 0) {
     std::cerr << "Not all tests passed! " << num_failed_tests << " failures.\n";
     return -1;
