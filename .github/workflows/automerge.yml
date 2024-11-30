@@ -8,13 +8,7 @@ on:
       - completed
 
 jobs:
-  log-github-actor:
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo ${{ github.actor }}
   automerge:
-    needs: log-github-actor
-    if: ${{ github.actor == 'dependabot[bot]' }}
     runs-on: ubuntu-latest
     steps:
       - uses: "pascalgn/automerge-action@v0.14.3"
