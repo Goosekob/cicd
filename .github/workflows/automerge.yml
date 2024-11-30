@@ -2,8 +2,9 @@ name: automerge
 
 on:
   pull_request:
+    types: [opened, synchronize]
   workflow_run:
-    workflows: ["build"]
+    workflows: ["build"] 
     types:
       - completed
 
