@@ -1,20 +1,28 @@
-name: aaa
+name: C++ CI - Simple Tests
+
 on:
-   # События, которые запускают jobs
-    push:
-      branches: [ "main" ]
-    pull_request:
-      branches: [ "main" ]
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
 
-# jobs запускаются параллельно, если не указана последовательность
 jobs:
-    hello:
-        runs-on: ubuntu-latest
-        # Шаги
-        steps:
-          # Actions от github: проверяет репозиторий, гит и т.д.
-          - uses: actions/checkout@v3
-
-          # Скрипт shell
-          - name: script
-            run: echo Hello, world!
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up C++
+        uses: actions/setup-cpp@v3
+        with:
+          cpp-standard: c++17
+      - name: Compile
+        run: |
+          mkdir build
+          cd build
+          cmake ..
+          make
+      - name: Run tests
+        run: |
+          cd build
+          ./mytests
+          
