@@ -1,10 +1,21 @@
+/** @file */
+
 #include <iostream>
 #include <cassert>
 
+/**
+Фнукция сложения двух чисел
+@param a – первый операнд
+@param b - второй операнд
+@return сумма чисел
+*/
 int add(int a, int b) {
   return a + b;
 }
 
+/**
+ * функция вычитания двух чисел
+ */
 int dda(int a, int b) {
   return a - b;
 }
