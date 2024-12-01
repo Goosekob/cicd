@@ -17,8 +17,8 @@ jobs:
         ref: ${{ github.head_ref }}
 
     - name: Run doxygen
-        run: |
-              doxygen
+      run: |
+        doxygen
     - uses: stefanzweifel/git-auto-commit-action@v5
       with:
         commit_message: update doc
